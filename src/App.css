@@ -1,19 +1,43 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .fighters-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  /* width: 600px; */
+  gap: 5px;
+  width: calc(205px*4);
 }
 
 .fighters-grid div {
   transition: transform 0.3s;
+  position: relative;
+  background-color: slategray;
+  width: 200px;
 }
 
 .fighters-grid div:hover {
   transform: scale(1.07);
+  cursor: pointer;
+}
+
+.fighter-name{
+  position: absolute;
+  bottom: 0;
+  right:1em;
+  box-sizing:1.5em;
+  color: beige;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000;
+}
+
+.fighter-img{
+  width:100%;
+  height:auto;
 }
