@@ -1,5 +1,7 @@
 import './App.css';
+import { useState } from 'react';
 import Fighter from './Components/Fighter';
+import FighterScreen from './Components/FighterSceen';
 
 function App() {
 
@@ -19,6 +21,10 @@ function App() {
     // {name: 'Pikachu', color: 'yellow'}
   ]
 
+  const [selectedFighter, setSelectedFighter] = useState()
+
+  // Pass down useState to onClick in Fighter.js
+
   return (
     <div className="App">
       <h1> Fighters </h1>
@@ -26,11 +32,14 @@ function App() {
         {
           fighters.map((element, index) => {
             return(
-              <Fighter fighter={element} />
+              <Fighter fighter={element} setSelectedFighter={setSelectedFighter}/>
             )
           })
         }
       </div>
+      {
+        selectedFighter ?  <FighterScreen selectedFighter={selectedFighter}/> : console.log('hi')
+      }
     </div>
   );
 }

@@ -1,6 +1,7 @@
-const Fighter = ({ fighter }) => {
+const Fighter = ({ fighter, setSelectedFighter }) => {
+
   return (
-    <div style={{backgroundColor: fighter.color}}>
+    <div style={{backgroundColor: fighter.color}} onClick={() => {setSelectedFighter(fighter.name)}}>
       <img src={`https://www.smashbros.com/assets_v2/img/fighter/thumb_a/${fighter.name.toLocaleLowerCase()}.png`} alt='thumbnail' className='fighter-img' />
       <h5 className='fighter-name'>{fighter.name}</h5>
     </div>
