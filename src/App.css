@@ -48,7 +48,39 @@
   width: 100%;
   background-color: lightgreen;
   z-index: 1;
-  opacity: 80%;
+  /* opacity: 80%; */
   top: 0;
   left: 0;
+  background-position: 50% 50%;
 }
+
+.char-model{
+  position: fixed;
+  bottom: 0%;
+  right: 10%;
+  width: auto;
+  height: 100%;
+}
+
+.char-name{
+  position: fixed;
+  z-index: 2;
+  text-transform: uppercase;
+  left: 5%;
+  bottom: 0;
+  font-size: 13em;
+  font-style: italic;
+}
+
+.char-name-bg{
+  
+}
+
+/* .close-focus{
+  z-index: 2;
+  float: left;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 20px;
+} */
